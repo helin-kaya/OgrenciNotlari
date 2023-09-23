@@ -8,6 +8,7 @@ using OgrenciNotlariEL.IdentityModels;
 
 namespace OgrenciNotlariEL.Entities
 {
+    [Table("USERFORGOTPASSWORDSHISTORICAL")]
     public class UserForgotPasswordsHistorical : BaseEntity
     {
         public string UserId { get; set; }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciNotlariDL", "Ogrenci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciNotlariEL", "OgrenciNotlariEL\OgrenciNotlariEL.csproj", "{BA6BE5E0-67B3-4574-8409-F1FAEE4DBCA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciNotlariUL", "OgrenciNotlariUL\OgrenciNotlariUL.csproj", "{65D87027-D300-4525-A1C2-CAD30587BEFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BA6BE5E0-67B3-4574-8409-F1FAEE4DBCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA6BE5E0-67B3-4574-8409-F1FAEE4DBCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA6BE5E0-67B3-4574-8409-F1FAEE4DBCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D87027-D300-4525-A1C2-CAD30587BEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D87027-D300-4525-A1C2-CAD30587BEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D87027-D300-4525-A1C2-CAD30587BEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D87027-D300-4525-A1C2-CAD30587BEFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
