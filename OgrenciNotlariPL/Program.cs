@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OgrenciNotlariDL.ContextInfo;
 using OgrenciNotlariEL.IdentityModels;
 using OgrenciNotlariEL.Mappings;
+using OgrenciNotlariPL.CreateDefaultData;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -67,5 +68,19 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+
+       var roleManager = serviceProvider.
+    GetRequiredService<RoleManager<AppRole>>();
+
+    //CreateData c = new CreateData(logger);
+    //c.CreateRoles(serviceProvider);
+
+}
+
 
 app.Run();

@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OgrenciNotlariDL\OgrenciNotlariDL.csproj" />
     <ProjectReference Include="..\OgrenciNotlariEL\OgrenciNotlariEL.csproj" />
+    <ProjectReference Include="..\OgrenciNotlariUL\OgrenciNotlariUL.csproj" />
   </ItemGroup>
 
 </Project>
