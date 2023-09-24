@@ -9,6 +9,6 @@ namespace OgrenciNotlariBL.EmailSenderProcess
     public interface  IEmailManager
     {
         bool SendEmail(EmailMessageModel model);
-        Task SendEmailAsync(EmailMessageModel model);
+
     }
 }

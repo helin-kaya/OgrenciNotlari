@@ -1,0 +1,56 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+<div class="row">
+    <div class="col-5 offset-3 offset-3">
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label>İsim</label>
+                <input type="text" class="form-control" asp-for="Name" />
+            </div>
+
+            <div class="form-group">
+                <label>Soyisim</label>
+                <input type="text" class="form-control" asp-for="Surname" />
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" class="form-control" asp-for="Email" />
+            </div>
+            <div class="form-group">
+                <label>Kullanıcı Adı:</label>
+                <input type="text" class="form-control" asp-for="Username" />
+            </div>
+            <div class="form-group">
+                <label>Dersid</label>
+                <input type="text" class="form-control" asp-for="LessonId" />
+            </div>
+            <div class="form-group">
+                <label>Doğum Günü:</label>
+                <input type="date" class="form-control" asp-for="BirthDate" />
+            </div>
+            <div class="form-group">
+                <label>Şifre:</label>
+                <input type="password" class="form-control" asp-for="Password" />
+            </div>
+            <div class="form-group">
+                <label>Şifre Tekrar:</label>
+                <input type="password" class="form-control" asp-for="PasswordConfirm" />
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">KAYIT OL</button>
+                <a asp-controller="Account" asp-action="Login">Zaten üye misiniz?</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+

@@ -15,6 +15,7 @@ namespace OgrenciNotlariBL.EmailSenderProcess
         {
             try
             {
+
                 var xx = _configuration.GetSection("SystemEmailOptions:Email").ToString();
                 MailMessage message = new MailMessage();
                 message.From = new MailAddress(_configuration.GetSection("SystemEmailOptions:Email").Value?.ToString());
@@ -39,9 +40,32 @@ namespace OgrenciNotlariBL.EmailSenderProcess
             }
         }
 
-        public Task SendEmailAsync(EmailMessageModel model)
+        public async Task SendMailAsync(EmailMessageModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress("hgyazilimsinifi@outlook.com");
+                message.To.Add(new MailAddress(model.To));
+                message.Subject = model.Subject;
+                message.Body = model.Body;
+                message.IsBodyHtml = true;
+
+                SmtpClient client = new SmtpClient();
+                client.Credentials = new System.Net.NetworkCredential("hgyazilimsinifi@outlook.com", "betulkadikoy2023");
+                client.Port = 587;
+                client.Host = "smtp-mail.outlook.com";
+                client.EnableSsl = true;
+
+                await client.SendMailAsync(message);
+
+            }
+            catch (Exception)
+            {
+
+                //loglasın
+            }
+
         }
     }
 }

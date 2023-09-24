@@ -2,10 +2,15 @@ using AutoMapper.Extensions.ExpressionMapping;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OgrenciNotlariDL.ContextInfo;
+using OgrenciNotlariDL.ImplementationofRepos;
+using OgrenciNotlariDL.InterfaceofRepos;
+using OgrenciNotlariBL.ImplementationofManagers;
+using OgrenciNotlariBL.InterfaceofManagers;
 using OgrenciNotlariEL.IdentityModels;
 using OgrenciNotlariEL.Mappings;
 using OgrenciNotlariPL.CreateDefaultData;
 using Serilog;
+using OgrenciNotlariBL.EmailSenderProcess;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +53,18 @@ builder.Services.AddAutoMapper(a =>
     a.AddExpressionMapping();
     a.AddProfile(typeof(Maps));
 });
+builder.Services.AddScoped<IEmailManager, EmailManager>();
+builder.Services.AddScoped<ILessonRepo, LessonRepo>();
+builder.Services.AddScoped<ILessonManager, LessonManager>();
+builder.Services.AddScoped<IStudentRepo, StudentRepo>();
+builder.Services.AddScoped<IStudentManager, StudentManager>();
+builder.Services.AddScoped<IStudentLessonScoreRepo, StudentLessonScoreRepo>();
+builder.Services.AddScoped<IStudentLessonScoreManager, StudentLessonScoreManager>();
+builder.Services.AddScoped<IUserForgotPasswordsHistoricalRepo, UserForgotPasswordsHistoricalRepo>();
+builder.Services.AddScoped<IUserForgotPasswordsHistoricalManager, UserForgotPasswordsHistoricalManager>();
+
+builder.Services.AddScoped<IUserForgotPasswordTokensRepo, UserForgotPasswordTokensRepo>();
+builder.Services.AddScoped<IUserForgotPasswordTokensManager, UserForgotPasswordTokensManager>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
