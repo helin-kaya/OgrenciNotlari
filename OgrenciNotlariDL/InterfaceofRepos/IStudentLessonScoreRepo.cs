@@ -7,7 +7,7 @@ using OgrenciNotlariEL.Entities;
 
 namespace OgrenciNotlariDL.InterfaceofRepos
 {
-    public interface IStudentLessonScore:IRepository<StudentLessonScore,int>
+    public interface IStudentLessonScoreRepo:IRepository<StudentLessonScore,int>
     {
     }
 }
