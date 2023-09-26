@@ -80,6 +80,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); //login logout
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OgrenciNotlariPL.Models;
 
@@ -14,6 +15,12 @@ namespace OgrenciNotlariPL.Controllers
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult Indexim()
         {
             return View();
         }
