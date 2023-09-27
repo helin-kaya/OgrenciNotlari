@@ -16,6 +16,8 @@ namespace OgrenciNotlariEL.ViewModels
         public string Name { get; set; }
         [StringLength(50, ErrorMessage = "Öğrenci soyadı max 50 karakter olmalı")]
         [MinLength(2, ErrorMessage = "Öğrenci soyadı min 2 karakter olmalı")]
-        public int Surname { get; set; }
+        public string Surname { get; set; }
+        [StringLength(9, ErrorMessage = "Öğrenci numarası 9 karakter olmalı")]
+        public string StudentNumber { get; set; }
     }
 }

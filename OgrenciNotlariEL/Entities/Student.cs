@@ -16,6 +16,7 @@ namespace OgrenciNotlariEL.Entities
         public string Name { get; set; }
         [StringLength(50)]
         [MinLength(2)]
-        public int Surname { get; set; }
+        public string Surname { get; set; }
+        public string StudentNumber { get; set; }
     }
 }
