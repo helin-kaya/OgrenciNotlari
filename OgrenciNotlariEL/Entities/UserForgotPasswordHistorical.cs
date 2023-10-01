@@ -9,7 +9,7 @@ using OgrenciNotlariEL.IdentityModels;
 namespace OgrenciNotlariEL.Entities
 {
     [Table("USERFORGOTPASSWORDSHISTORICAL")]
-    public class UserForgotPasswordsHistorical : BaseEntity
+    public class UserForgotPasswordsHistorical : BaseEntity<int>
     {
         public string UserId { get; set; }
         public string Password { get; set; } // şimdilik hashlemeyeceğim! Sonra bu hashlenme mekanizması düşünülmeli...

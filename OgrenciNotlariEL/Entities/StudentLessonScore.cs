@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace OgrenciNotlariEL.Entities
 {
     [Table("STUDENTLESSONSCORE")]
-    public class StudentLessonScore:BaseEntity
+    public class StudentLessonScore:BaseEntity<int>
     {
         public int Score { get; set; }
         public int LessonId { get; set; }

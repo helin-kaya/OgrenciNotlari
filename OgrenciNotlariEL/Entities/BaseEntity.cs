@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace OgrenciNotlariEL.Entities
 {
-    public class BaseEntity
+    public class BaseEntity<T>
     {
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public virtual int Id { get; set; }
+        public virtual T Id { get; set; }
         [Column(Order = 2)]
 
         public virtual DateTime CreatedDate { get; set; }

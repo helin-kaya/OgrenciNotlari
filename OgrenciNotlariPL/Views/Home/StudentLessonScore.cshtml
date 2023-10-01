@@ -1,0 +1,33 @@
+﻿@using OgrenciNotlariEL.ViewModels;
+@model List<StudentLessonScoreDTO>
+@{
+    ViewData["Title"] = "StudentLessonScore";
+}
+
+<h1>StudentLessonScore</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Öğrenci Numarası</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Ders</th>
+            <th>Not</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Student.StudentNumber</td>
+                <td>@student.Student.Name</td>
+                <td>@student.Student.Surname</td>
+                <td>@student.Lesson.Name</td>
+                <td>@student.Score</td>
+
+                
+                
+            </tr>
+        }
+    </tbody>
+</table>

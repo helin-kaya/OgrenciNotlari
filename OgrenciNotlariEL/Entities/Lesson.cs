@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace OgrenciNotlariEL.Entities
 {
     [Table("LESSON")]
-    public class Lesson:BaseEntity
+    public class Lesson:BaseEntity<int>
     {
         
         [StringLength(50)]

@@ -9,7 +9,7 @@ using OgrenciNotlariEL.IdentityModels;
 namespace OgrenciNotlariEL.Entities
 {
     [Table("USERFORGOTPASSWORDSTOKENS")]
-    public class UserForgotPasswordTokens : BaseEntity
+    public class UserForgotPasswordTokens : BaseEntity<int>
     {
         public string UserId { get; set; }
         public string Url { get; set; }

@@ -15,6 +15,8 @@ namespace OgrenciNotlariEL.ViewModels
         public int Score { get; set; }
         public int LessonId { get; set; }
         public int StudentId { get; set; }
+        //public List<Student>? Students { get; set; }
+        //public List<Lesson>? Lessons { get; set; }
         public  LessonDTO? Lesson { get; set; }
 
         public  StudentDTO? Student { get; set; }

@@ -39,12 +39,9 @@
                         <form method="post" action="@Url.Action("Delete", "Personel", new { id = item.Id })">
                             <button type="submit" class="btn btn-sm btn-success">PERSONELİ SİL</button>
                         </form>
-                    }*@
-                    <form method="post" action="@Url.Action("DeleteStudent", "Home", new { id = student.Id })">
-                        <button type="submit" class="btn btn-sm btn-success">Öğrenciyi Sil</button>
-                    </form>
+                    }*@  
                     <p>
-                        <input type="button" value="Öğrenciye Not Ekle" class="btn btn-primary" onclick="location.href='@Url.Action("AddStudentScore", "Home",new { id = student.Id })'" />
+                        <input type="button" value="Öğrenciye Not Ekle" class="btn btn-primary" onclick="location.href='@Url.Action("AddStudentLessonScore", "Home",new { id = @student.Id })'" />
                     </p>
                     
                 </td>

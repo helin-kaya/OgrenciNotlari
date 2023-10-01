@@ -102,8 +102,9 @@
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">GİRİŞ YAP</button>
-                <a asp-controller="Account" asp-action="Register">Üye Olmak için tıklayınız</a>
-                <a asp-controller="Account" asp-action="ForgotPassword">Şifremi Unuttum</a>
+                <input type="button" value="Kayıt Ol" class="btn btn-primary" onclick="location.href='@Url.Action("Register", "Account")'" />
+                @*<a asp-controller="Account" asp-action="Register">Üye Olmak için tıklayınız</a>*@
+                @*<a asp-controller="Account" asp-action="ForgotPassword">Şifremi Unuttum</a>*@
 
             </div>
 

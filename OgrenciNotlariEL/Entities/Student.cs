@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace OgrenciNotlariEL.Entities
 {
     [Table("STUDENT")]
-    public class Student:BaseEntity
+    public class Student:BaseEntity<int>
     {
         [StringLength(50)]
         [MinLength(2)]
